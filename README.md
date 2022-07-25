@@ -1,1 +1,1 @@
-# wine-predictor-web-app
+# wine-quality-deploement-heroku
