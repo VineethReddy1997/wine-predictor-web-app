@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Wine Quality Predictor</title>
+		<link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpgJanYxY0Uhq8C0xNQChKxz3REWntgE5Zzg&usqp=CAU">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='wine.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+		
+	</head>
+
+    <body style="background-color:rgba(186, 228, 239, 0.347);">
+		<div align = " center" class="container">
+            <h2 align = " center" class='container-heading'><span class="heading_font">Wine Quality Predictor</span></h2>
+            <div align = " center"  class='description'>
+    			<h3>Your Wine Result is Here👇</h3>
+    		</div>
+    	</div>
+	</body>
+		<!-- Result -->
+		<div  align = "center"class="results">
+			{% if prediction==1 %}
+				<h1>Prediction : <span class='safe'>Wow..! The Quality of wine is GOOD.</span></h1>
+				<img class="jpeg" width="400" src="{{ url_for('static', filename='good wine.jpg')}}" alt="Good Wine Image">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='danger'>The Predicted Quality of Wine is BAD..!.</span></h1>
+				<img class="jpeg1" width="400" src="{{ url_for('static', filename='bad wine.jpg')}}" alt="Bad Wine Image">
+			{% endif %}
+		</div>
+		</body>
+		 <!--===== FOOTER =====-->
+         <footer align ="center" class="footer">
+        
+			<div class="col item social">
+				<td>
+					<p>&copy;2022 Vineeth Reddy. All Rights Are Reserved.</p>
+					<p>Nice to See You...❤️ 😊 👨‍💻</p>
+					<a style="padding-left:25px;" href='https://www.linkedin.com/in/vineethreddy1997/'><i class="fa fa-linkedin"></i></a>
+					<a style="padding-left:20px;" href='https://twitter.com/gangulavineeth1'><i class="fa fa-twitter"></i></a>
+					<a style="padding-left:20px;" href='https://www.instagram.com/vineeth_reddy_2426/'><i class="fa fa-instagram"></i></a>
+					<a style="padding-left:20px;" href='https://github.com/VineethReddy1997'><i class="fa fa-github"></i></a>
+				</td>
+			</div>
+	 </footer>
+		</div>
+</html>
+  
